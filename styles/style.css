@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1b262c;
+    color: #f0f0f0;
+}
+
+#quote-container {
+    background-color: #090000;
+    width: 65vw;
+    min-height: 70vh;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+    animation: soundWaves 2s infinite alternate;
+}
+
+@keyframes soundWaves {
+    0% {
+        box-shadow: 0 0 10px rgba(223, 116, 116, 0.7),
+            0 0 20px rgba(140, 236, 84, 0.5),
+            0 0 30px rgba(207, 97, 217, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(223, 116, 116, 0.7),
+            0 0 40px rgba(140, 236, 84, 0.5),
+            0 0 60px rgba(207, 97, 217, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(223, 116, 116, 0.7),
+            0 0 20px rgba(140, 236, 84, 0.5),
+            0 0 30px rgba(207, 97, 217, 0.3);
+    }
+}
+
+#quote-container img {
+    max-width: 70%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+#quote-container:hover img {
+    transform: scale(1.05);
+}
+
+#quote {
+    color: #d4af37;
+    font-family: 'Comic Sans MS', cursive;
+    max-width: 80%;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+#character {
+    color: #d2bfbf;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.bi:hover {
+    cursor: pointer;
+}
+
+#left-arrow,
+#right-arrow {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#quote-container:hover #left-arrow,
+#quote-container:hover #right-arrow {
+    opacity: 1;
+}
